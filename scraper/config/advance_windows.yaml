@@ -1,0 +1,17 @@
+# Advance purchase booking windows in days
+windows:
+  - days: 1
+    label: "T+1 (Next Day / Spot)"
+    description: "Urgent or last-minute domestic business travel"
+  - days: 7
+    label: "T+7 (One Week Lead)"
+    description: "Short advance planning"
+  - days: 15
+    label: "T+15 (Fortnight Lead)"
+    description: "Standard domestic leisure and business planning"
+  - days: 30
+    label: "T+30 (One Month Lead)"
+    description: "Early advance booking window"
+  - days: 45
+    label: "T+45 (Long Lead)"
+    description: "Deep advance leisure booking window"

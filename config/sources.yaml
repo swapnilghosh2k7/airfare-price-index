@@ -1,0 +1,49 @@
+# AirFareX - Data Source & Provider Adapters Configuration
+# Strictly follows ethical scraping policies: no CAPTCHA bypass, no bot evasion.
+
+providers:
+  - id: "mock_provider"
+    name: "Synthetic Fare Provider"
+    type: "synthetic"
+    enabled: true
+    priority: 1
+    description: "Generates realistic airfare quotes based on economic pricing curves, advance purchase windows, and seasonal demand"
+
+  - id: "dataset_provider"
+    name: "Historical Reference Dataset Provider"
+    type: "csv_dataset"
+    enabled: true
+    priority: 2
+    data_path: "data/reference/sample_airfares.csv"
+    description: "Loads pre-collected or officially supplied historical airfare datasets"
+
+  - id: "indigo_permitted"
+    name: "IndiGo Permitted Adapter"
+    type: "live_http"
+    enabled: false
+    priority: 3
+    respect_robots_txt: true
+    rate_limit_seconds: 5.0
+    headers:
+      User-Agent: "AirFareX-Research-Bot/1.0 (+http://airfarex.local/policy)"
+    description: "Permitted HTTP adapter for IndiGo public endpoints (requires authorization/public API)"
+
+  - id: "airindia_permitted"
+    name: "Air India Permitted Adapter"
+    type: "live_http"
+    enabled: false
+    priority: 4
+    respect_robots_txt: true
+    rate_limit_seconds: 5.0
+    headers:
+      User-Agent: "AirFareX-Research-Bot/1.0 (+http://airfarex.local/policy)"
+    description: "Permitted HTTP adapter for Air India public endpoints"
+
+  - id: "ota_permitted"
+    name: "OTA Aggregator Permitted Adapter"
+    type: "live_http"
+    enabled: false
+    priority: 5
+    respect_robots_txt: true
+    rate_limit_seconds: 5.0
+    description: "Permitted HTTP adapter for partner OTA APIs"

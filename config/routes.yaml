@@ -1,0 +1,87 @@
+# AirFareX - Indian Airfare Price Index Route Configuration
+# IMPORTANT: Weights defined here are DEMO_WEIGHTS for simulation and prototype testing.
+# They are fully configurable and designed to be replaced with official DGCA/MoSPI passenger volume weights.
+
+weight_type: "DEMO_WEIGHTS"
+description: "Representative passenger volume weights for top 10 domestic Indian flight routes (2026 baseline simulation)"
+
+routes:
+  - route_code: "DEL-BOM"
+    origin: "DEL"
+    destination: "BOM"
+    origin_city: "Delhi"
+    destination_city: "Mumbai"
+    weight: 0.18
+    active: true
+
+  - route_code: "DEL-BLR"
+    origin: "DEL"
+    destination: "BLR"
+    origin_city: "Delhi"
+    destination_city: "Bengaluru"
+    weight: 0.15
+    active: true
+
+  - route_code: "BOM-BLR"
+    origin: "BOM"
+    destination: "BLR"
+    origin_city: "Mumbai"
+    destination_city: "Bengaluru"
+    weight: 0.13
+    active: true
+
+  - route_code: "DEL-CCU"
+    origin: "DEL"
+    destination: "CCU"
+    origin_city: "Delhi"
+    destination_city: "Kolkata"
+    weight: 0.10
+    active: true
+
+  - route_code: "BLR-HYD"
+    origin: "BLR"
+    destination: "HYD"
+    origin_city: "Bengaluru"
+    destination_city: "Hyderabad"
+    weight: 0.09
+    active: true
+
+  - route_code: "MAA-DEL"
+    origin: "MAA"
+    destination: "DEL"
+    origin_city: "Chennai"
+    destination_city: "Delhi"
+    weight: 0.09
+    active: true
+
+  - route_code: "CCU-BLR"
+    origin: "CCU"
+    destination: "BLR"
+    origin_city: "Kolkata"
+    destination_city: "Bengaluru"
+    weight: 0.08
+    active: true
+
+  - route_code: "DEL-HYD"
+    origin: "DEL"
+    destination: "HYD"
+    origin_city: "Delhi"
+    destination_city: "Hyderabad"
+    weight: 0.07
+    active: true
+
+  - route_code: "BOM-DEL"
+    origin: "BOM"
+    destination: "DEL"
+    origin_city: "Mumbai"
+    destination_city: "Delhi"
+    weight: 0.06
+    active: true
+
+  - route_code: "BLR-MAA"
+    origin: "BLR"
+    destination: "MAA"
+    origin_city: "Bengaluru"
+    destination_city: "Chennai"
+    weight: 0.05
+    active: true
