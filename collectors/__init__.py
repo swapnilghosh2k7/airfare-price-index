@@ -1,1 +1,0 @@
-"""AirFareX Provider Adapters Package"""
